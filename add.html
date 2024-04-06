@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- jquery and custom js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Add Patient</title>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <main>
+    <nav>
+      <div class="navbar-fixed teal lighten-2">
+        <a href="index.html" class="brand-logo" id="brand-logo">
+          <img src="images/h&s.png" />
+          Zhongyi - Patients Management System
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">All Patients</a></li>
+          <li><a href="add.html">Add Patients</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav teal lighten-2" id="mobile-demo">
+      <li><a href="index.html">All Patients</a></li>
+      <li><a href="add.html">Add Patients</a></li>
+    </ul>
+
+    <div class="container">
+      <h4 class="center">Add Patient</h4>
+        <div class="row">
+          <form class="col s12" id="add_patients_form">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="firstName" type="text" class="validate" data-length="25" minlength="1" maxlength="25" pattern="[A-Za-z\s]*" required>
+                <label for="firstName">First Name (Required)</label>
+                <span class="helper-text" data-error="Must be string"></span>
+              </div>
+              <div class="input-field col s6">
+                <input id="lastName" type="text" class="validate" data-length="25" minlength="1" maxlength="25" pattern="[A-Za-z\s]*" required>
+                <label for="lastName">Last Name (Required)</label>
+                <span class="helper-text" data-error="Must be string"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="dateOfBirth" type="text" class="datepicker" required>
+                <label for="dateOfBirth">dateOfBirth (Required)</label>
+                <span class="helper-text" data-error="Invalid dateOfBirth format"></span>
+              </div>
+              <div class="input-field col s6">
+                <input id="address" type="text" class="validate" data-length="25" minlength="1" maxlength="25" required>
+                <label for="address">Address (Required)</label>
+                <span class="helper-text" data-error="Invalid address format"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="city" type="text" class="validate" data-length="25" minlength="1" maxlength="25" required>
+                <label for="city">City (Required)</label>
+                <span class="helper-text" data-error="Must be string"></span>
+              </div>
+              <div class="input-field col s6">
+                <input id="country" type="text" class="validate" data-length="25" minlength="1" maxlength="25" required>
+                <label for="country">Country (Required)</label>
+                <span class="helper-text" data-error="Must be string"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                <button class="btn waves-effect waves-light" type="reset" name="action">Reset</button>
+                <button class="btn waves-effect waves-light" type="button" onclick="location.replace('index.html')">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+  </main>
+
+  <footer class="page-footer teal lighten-2">
+    <div class="container">
+      <div class="row">
+        <div class="col s6">
+          © 2023 Zhongyi Fu
+        </div>
+        <div class="col s6">
+          <a class="grey-text text-lighten-4 right" target="_blank" href="mailto:z.fu177@mybvc.ca">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>
